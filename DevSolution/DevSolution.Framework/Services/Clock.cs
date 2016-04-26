@@ -9,7 +9,7 @@ namespace DevSolution.Services
 {
     public class Clock : IClock
     {
-        public DateTime UtcNow
+        public DateTime Now
         {
             get { return DateTime.UtcNow; }
         }
@@ -19,7 +19,7 @@ namespace DevSolution.Services
             return new AbsoluteExpirationToken(this, duration);
         }
 
-        public IVolatileToken WhenUtc(DateTime absoluteUtc)
+        public IVolatileToken When(DateTime absoluteUtc)
         {
             return new AbsoluteExpirationToken(this, absoluteUtc);
         }
@@ -41,14 +41,14 @@ namespace DevSolution.Services
             public AbsoluteExpirationToken(IClock clock, TimeSpan duration)
             {
                 _clock = clock;
-                _invalidateUtc = _clock.UtcNow.Add(duration);
+                _invalidateUtc = _clock.Now.Add(duration);
             }
 
             public bool IsCurrent
             {
                 get
                 {
-                    return _clock.UtcNow < _invalidateUtc;
+                    return _clock.Now < _invalidateUtc;
                 }
             }
         }

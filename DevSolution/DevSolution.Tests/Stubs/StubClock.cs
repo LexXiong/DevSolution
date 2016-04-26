@@ -12,19 +12,19 @@ namespace DevSolution.Tests.Stubs
     {
         public StubClock()
         {
-            UtcNow = new DateTime(2009, 10, 14, 12, 34, 56, DateTimeKind.Utc);
+            Now = new DateTime(2009, 10, 14, 12, 34, 56, DateTimeKind.Utc);
         }
 
-        public DateTime UtcNow { get; private set; }
+        public DateTime Now { get; private set; }
 
         public void Advance(TimeSpan span)
         {
-            UtcNow = UtcNow.Add(span);
+            Now = Now.Add(span);
         }
 
         public DateTime FutureMoment(TimeSpan span)
         {
-            return UtcNow.Add(span);
+            return Now.Add(span);
         }
 
 
@@ -33,7 +33,7 @@ namespace DevSolution.Tests.Stubs
             return new Clock.AbsoluteExpirationToken(this, duration);
         }
 
-        public IVolatileToken WhenUtc(DateTime absoluteUtc)
+        public IVolatileToken When(DateTime absoluteUtc)
         {
             return new Clock.AbsoluteExpirationToken(this, absoluteUtc);
         }
