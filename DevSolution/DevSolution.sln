@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevSolution.Framework", "De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevSolution.Tests", "DevSolution.Tests\DevSolution.Tests.csproj", "{6175DCAF-D101-487C-A0FB-9501C69AEB7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevSolution.Caching", "DevSolution.Caching\DevSolution.Caching.csproj", "{DDB77A0C-A5D1-47D1-AA25-F37FBC62FF24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6175DCAF-D101-487C-A0FB-9501C69AEB7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6175DCAF-D101-487C-A0FB-9501C69AEB7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6175DCAF-D101-487C-A0FB-9501C69AEB7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDB77A0C-A5D1-47D1-AA25-F37FBC62FF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDB77A0C-A5D1-47D1-AA25-F37FBC62FF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDB77A0C-A5D1-47D1-AA25-F37FBC62FF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB77A0C-A5D1-47D1-AA25-F37FBC62FF24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

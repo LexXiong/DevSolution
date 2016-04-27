@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace DevSolution.Caching
 {
     /// <summary>
-    /// 获取上下文
+    /// 缓存上下文
     /// </summary>
     public interface IAcquireContext
     {
         /// <summary>
-        /// 不稳定缓存监视器
+        /// 用于获取缓存失效方式
         /// </summary>
         Action<IVolatileToken> Monitor { get; }
     }
