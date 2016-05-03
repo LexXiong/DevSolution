@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 namespace DevSolution.Caching
 {
     /// <summary>
-    /// 挥发性令牌
+    /// 失效令牌
     /// </summary>
     public interface IVolatileToken
     {
+        /// <summary>
+        /// 是否有效
+        /// </summary>
         bool IsCurrent { get; }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DevSolution.Caching
 {
     /// <summary>
-    /// 缓存持有者接口
+    /// 缓存存储方式
     /// </summary>
     public interface ICacheHolder : ISingletonDependency
     {

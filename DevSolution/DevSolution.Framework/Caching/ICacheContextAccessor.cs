@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace DevSolution.Caching
 {
     /// <summary>
-    /// 缓存上下文访问器
+    /// 保存缓存上下文。
+    /// 当有多个缓存上下文时，保证缓存同时失效。
     /// </summary>
     public interface ICacheContextAccessor
     {
