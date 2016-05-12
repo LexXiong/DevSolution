@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Tenants>
+  <Default>9|Orchard.Framework;Settings;Orchard.Themes;Orchard.Modules;Orchard.CodeGeneration;Boying.MainPage;Shapes;VuLu;TheThemeMachine;|</Default>
+</Tenants>

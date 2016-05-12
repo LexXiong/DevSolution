@@ -1,10 +1,11 @@
 ﻿using Orchard.ContentManagement;
 
-namespace Orchard.Themes.Models {
-    public class ThemeSiteSettingsPart : ContentPart {
-        public string CurrentThemeName {
-            get { return this.Retrieve(x => x.CurrentThemeName); }
-            set { this.Store(x => x.CurrentThemeName, value); }
-        }
+namespace Orchard.Themes.Models
+{
+    public class ThemeSiteSettingsPart
+    {
+        public virtual int Id { get; set; }
+
+        public string CurrentThemeName { get; set; }
     }
 }

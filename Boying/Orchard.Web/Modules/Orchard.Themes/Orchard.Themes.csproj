@@ -91,18 +91,11 @@
   <ItemGroup>
     <Compile Include="AdminMenu.cs" />
     <Compile Include="Commands\ThemeCommands.cs" />
-    <Compile Include="Drivers\DisableThemePartDriver.cs" />
     <Compile Include="Events\ThemeDisableEventHandler.cs" />
     <Compile Include="Events\IExtensionDisplayEventHandler.cs" />
-    <Compile Include="Migrations.cs" />
     <Compile Include="Models\ThemeEntry.cs" />
-    <Compile Include="Models\DisableThemePart.cs" />
-    <Compile Include="Recipes\Executors\CurrentThemeStep.cs" />
-    <Compile Include="Recipes\Builders\CurrentThemeStep.cs" />
-    <Compile Include="Recipes\Executors\ThemeStep.cs" />
     <Compile Include="ResourceManifest.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Handlers\ThemeSiteSettingsPartHandler.cs" />
     <Compile Include="Models\ThemeSiteSettingsPart.cs" />
     <Compile Include="Permissions.cs" />
     <Compile Include="Preview\IPreviewTheme.cs" />

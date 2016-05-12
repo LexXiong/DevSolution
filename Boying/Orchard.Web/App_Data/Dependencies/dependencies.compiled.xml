@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies>
+  <Dependency>
+    <ExtensionId>Boying.MainPage</ExtensionId>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Boying.MainPage/Boying.MainPage.csproj</VirtualPath>
+    <Hash>fdf6a6800ffeca07</Hash>
+  </Dependency>
+  <Dependency>
+    <ExtensionId>Orchard.CodeGeneration</ExtensionId>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Orchard.CodeGeneration/bin/Orchard.CodeGeneration.dll</VirtualPath>
+    <Hash>491a3a980fd7adac</Hash>
+  </Dependency>
+  <Dependency>
+    <ExtensionId>Orchard.Migrations</ExtensionId>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Orchard.Migrations/bin/Orchard.Migrations.dll</VirtualPath>
+    <Hash>490dea8bbe4a63b0</Hash>
+  </Dependency>
+  <Dependency>
+    <ExtensionId>Orchard.Modules</ExtensionId>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Orchard.Modules/bin/Orchard.Modules.dll</VirtualPath>
+    <Hash>4903ca819cc863c3</Hash>
+  </Dependency>
+  <Dependency>
+    <ExtensionId>Orchard.Themes</ExtensionId>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Orchard.Themes/Orchard.Themes.csproj</VirtualPath>
+    <Hash>f7411ae1df58a039</Hash>
+  </Dependency>
+</Dependencies>

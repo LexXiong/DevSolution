@@ -125,6 +125,9 @@
     <Content Include="TheAdmin\Views\Pager.cshtml" />
     <Content Include="TheAdmin\Views\OrchardVersion.cshtml" />
     <Content Include="TheThemeMachine\ThemeZonePreview.png" />
+    <Content Include="VuLu\Content\rss.png" />
+    <Content Include="VuLu\Styles\Site.css" />
+    <Content Include="VuLu\Theme.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -201,6 +204,14 @@
       <Project>{9916839c-39fc-4ceb-a5af-89ca7e87119f}</Project>
       <Name>Orchard.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VuLu\Content\Web.config" />
+    <Content Include="VuLu\placement.info" />
+    <Content Include="VuLu\Scripts\Web.config" />
+    <Content Include="VuLu\Styles\Web.config" />
+    <Content Include="VuLu\Views\Layout.cshtml" />
+    <Content Include="VuLu\Views\Web.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
