@@ -1,0 +1,9 @@
+﻿Name: Code Generation
+AntiForgery: enabled
+Author: The Boying Team
+Website: http://Boyingproject.net
+Version: 1.10.1
+BoyingVersion: 1.9
+Description: Tools to create Boying components.
+FeatureDescription: Tools to create Boying components.
+Category: Developer

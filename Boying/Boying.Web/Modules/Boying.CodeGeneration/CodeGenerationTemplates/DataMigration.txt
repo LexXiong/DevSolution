@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using Boying.Core.Contents.Extensions;
+using Boying.Data.Migration;
+
+namespace $$FeatureName$$ {
+    public class Migrations : DataMigrationImpl {
+
+        public int Create() {
+$$Commands$$
+
+            return 1;
+        }
+    }
+}

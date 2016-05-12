@@ -1,0 +1,16 @@
+﻿using System.Web.Mvc;
+using Boying.Localization;
+using Boying;
+
+namespace $$ModuleName$$.Controllers {
+    public class $$ControllerName$$ : Controller {
+        public IBoyingServices Services { get; set; }
+
+        public $$ControllerName$$(IBoyingServices services) {
+            Services = services;
+            T = NullLocalizer.Instance;
+        }
+
+        public Localizer T { get; set; }
+    }
+}

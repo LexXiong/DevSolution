@@ -1,0 +1,8 @@
+﻿Name: $$ThemeName$$
+Author: The Boying Team
+Website: http://www.Boyingproject.net
+Description: Description for the theme
+Version: 1.0
+BaseTheme: $$BaseTheme$$
+# todo: provide tags
+# Tags: Classic, Serif

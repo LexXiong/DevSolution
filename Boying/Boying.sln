@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{383DBA32
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{74492CBC-7201-417E-BC29-28B4C25A58B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Web", "Orchard.Web\Orchard.Web.csproj", "{50B779EA-EC00-4699-84C0-03B395C365D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Web", "Boying.Web\Boying.Web.csproj", "{50B779EA-EC00-4699-84C0-03B395C365D2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{0DFA2E10-96C8-4E05-BC10-B710B97ECCDE} = {0DFA2E10-96C8-4E05-BC10-B710B97ECCDE}
 		{C0C45321-B51D-4D8D-9B7B-AA4C2E0B2962} = {C0C45321-B51D-4D8D-9B7B-AA4C2E0B2962}
@@ -23,39 +23,39 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Web", "Orchard.Web\
 		{ABC826D4-2FA1-4F2F-87DE-E6095F653810} = {ABC826D4-2FA1-4F2F-87DE-E6095F653810}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Framework", "Orchard\Orchard.Framework.csproj", "{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Framework", "Boying\Boying.Framework.csproj", "{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Framework.Tests", "Orchard.Tests\Orchard.Framework.Tests.csproj", "{ABC826D4-2FA1-4F2F-87DE-E6095F653810}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Framework.Tests", "Boying.Tests\Boying.Framework.Tests.csproj", "{ABC826D4-2FA1-4F2F-87DE-E6095F653810}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Web.Tests", "Orchard.Web.Tests\Orchard.Web.Tests.csproj", "{F112851D-B023-4746-B6B1-8D2E5AD8F7AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Web.Tests", "Boying.Web.Tests\Boying.Web.Tests.csproj", "{F112851D-B023-4746-B6B1-8D2E5AD8F7AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Tests.Modules", "Orchard.Tests.Modules\Orchard.Tests.Modules.csproj", "{6CB3EB30-F725-45C0-9742-42599BA8E8D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Tests.Modules", "Boying.Tests.Modules\Boying.Tests.Modules.csproj", "{6CB3EB30-F725-45C0-9742-42599BA8E8D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Core", "Orchard.Web\Core\Orchard.Core.csproj", "{9916839C-39FC-4CEB-A5AF-89CA7E87119F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Core", "Boying.Web\Core\Boying.Core.csproj", "{9916839C-39FC-4CEB-A5AF-89CA7E87119F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Core.Tests", "Orchard.Core.Tests\Orchard.Core.Tests.csproj", "{2FC1D9C8-446D-4414-B252-5E9FBE61EB63}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Core.Tests", "Boying.Core.Tests\Boying.Core.Tests.csproj", "{2FC1D9C8-446D-4414-B252-5E9FBE61EB63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuild.Orchard.Tasks", "Tools\MSBuild.Orchard.Tasks\MSBuild.Orchard.Tasks.csproj", "{5E5E7A21-C7B2-44D8-8593-2F9541AE041D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuild.Boying.Tasks", "Tools\MSBuild.Boying.Tasks\MSBuild.Boying.Tasks.csproj", "{5E5E7A21-C7B2-44D8-8593-2F9541AE041D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard", "Tools\Orchard\Orchard.csproj", "{33B1BC8D-E292-4972-A363-22056B207156}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying", "Tools\Boying\Boying.csproj", "{33B1BC8D-E292-4972-A363-22056B207156}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Tests", "Tools\Orchard.Tests\Orchard.Tests.csproj", "{0DFA2E10-96C8-4E05-BC10-B710B97ECCDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Tests", "Tools\Boying.Tests\Boying.Tests.csproj", "{0DFA2E10-96C8-4E05-BC10-B710B97ECCDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Modules", "Orchard.Web\Modules\Orchard.Modules\Orchard.Modules.csproj", "{17F86780-9A1F-4AA1-86F1-875EEC2730C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Modules", "Boying.Web\Modules\Boying.Modules\Boying.Modules.csproj", "{17F86780-9A1F-4AA1-86F1-875EEC2730C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.CodeGeneration", "Orchard.Web\Modules\Orchard.CodeGeneration\Orchard.CodeGeneration.csproj", "{C0C45321-B51D-4D8D-9B7B-AA4C2E0B2962}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.CodeGeneration", "Boying.Web\Modules\Boying.CodeGeneration\Boying.CodeGeneration.csproj", "{C0C45321-B51D-4D8D-9B7B-AA4C2E0B2962}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Migrations", "Orchard.Web\Modules\Orchard.Migrations\Orchard.Migrations.csproj", "{EA4F1DA7-F2AB-4384-9AA4-9B756E2026B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Migrations", "Boying.Web\Modules\Boying.Migrations\Boying.Migrations.csproj", "{EA4F1DA7-F2AB-4384-9AA4-9B756E2026B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Themes", "Orchard.Web\Themes\Themes.csproj", "{CB70A642-8CEC-4DDE-8C9F-AD08900EC98D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Themes", "Boying.Web\Themes\Themes.csproj", "{CB70A642-8CEC-4DDE-8C9F-AD08900EC98D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.WarmupStarter", "Orchard.WarmupStarter\Orchard.WarmupStarter.csproj", "{5C0D5249-AEF5-4BB6-8F5F-057B91AC2D7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.WarmupStarter", "Boying.WarmupStarter\Boying.WarmupStarter.csproj", "{5C0D5249-AEF5-4BB6-8F5F-057B91AC2D7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Azure.Tests", "Orchard.Azure.Tests\Orchard.Azure.Tests.csproj", "{1CC62F45-E6FF-43D5-84BF-509A1085D994}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Azure.Tests", "Boying.Azure.Tests\Boying.Azure.Tests.csproj", "{1CC62F45-E6FF-43D5-84BF-509A1085D994}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.MainPage", "Orchard.Web\Modules\Boying.MainPage\Boying.MainPage.csproj", "{5745B332-3D96-40F6-9E2D-2DF6E76A3B54}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.MainPage", "Boying.Web\Modules\Boying.MainPage\Boying.MainPage.csproj", "{5745B332-3D96-40F6-9E2D-2DF6E76A3B54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Themes", "Orchard.Web\Modules\Orchard.Themes\Orchard.Themes.csproj", "{CDE24A24-01D3-403C-84B9-37722E18DFB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Themes", "Boying.Web\Modules\Boying.Themes\Boying.Themes.csproj", "{CDE24A24-01D3-403C-84B9-37722E18DFB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,2 @@
+﻿@model dynamic
+@if (Model.CurrentUser != null) {<div id="login">@T("User:") @Html.ItemDisplayText((Boying.ContentManagement.IContent)Model.CurrentUser)@T(" | ")@Html.ActionLink(T("Change password").ToString(), "ChangePassword", new { area = "Boying.Users", Controller = "Account" })@T(" | ")@Html.ActionLink(T("Logout").ToString(), "LogOff", new { Area = "Boying.Users", Controller = "Account", ReturnUrl = Href("~/") })</div>}

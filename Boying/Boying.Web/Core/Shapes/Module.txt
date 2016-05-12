@@ -1,0 +1,9 @@
+﻿Name: Shapes
+AntiForgery: enabled
+Author: The Boying Team
+Website: http://Boyingproject.net
+Version: 1.10.1
+BoyingVersion: 1.9
+Description: The shapes module contains core shape templates and display hooks.
+FeatureDescription: Core shape templates and display hooks.
+Category: Core
