@@ -1,0 +1,13 @@
+State: Running
+Themes: 
+Modules: 
+Name: Default
+DataProvider: sqlserver
+DataConnectionString: Data Source=.\SQLEXPRESS;Initial Catalog=Boying;User ID=sa;Password=123456
+DataTablePrefix: null
+RequestUrlHost: null
+RequestUrlPrefix: null
+EncryptionAlgorithm: AES
+EncryptionKey: E5F74739421C85B7CF616698C6EC53C133CF930D786D953A74153038CDDE34EE
+HashAlgorithm: HMACSHA256
+HashKey: CCF7B206630AF14201E5A739E0C2203F67110E7C6F9F2E8F524DBDF983B527876AAB40E6DD6F7A42EB3FD6518F22CC8D4BACBACC3D7DEF2CF2CC39D9150FACE3
