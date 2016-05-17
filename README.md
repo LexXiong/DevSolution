@@ -1,2 +1,3 @@
-# DevSolution
-Develop Framework Solution
+# PlugIn Framework
+这个插件框架来源于微软开源框架：Orchard，在该框架上移除了CMS的内容管理，实现了基础的插件功能。
+后期将会不断的完善该框架，以及更新该框架。
