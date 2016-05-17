@@ -234,3 +234,5 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+/Boying/Boying.Web/App_Data/Dependencies
+/Boying/Boying.Web/App_Data/Sites/Default/*.bin
