@@ -16,12 +16,11 @@ namespace Boying.MainPage
             {
                 new RouteDescriptor {
                     Route = new Route(
-                        "{controller}/{action}/{id}",
+                        "{controller}/{action}",
                         new RouteValueDictionary {
                             { "area", "Boying.MainPage" },
                             { "controller", "Home" },
                             { "action", "Index" },
-                            { "id", UrlParameter.Optional },
                         },
                         new RouteValueDictionary {
                             { "area", "Boying.MainPage" },
