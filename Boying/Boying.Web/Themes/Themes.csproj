@@ -200,18 +200,18 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Boying.Core.csproj">
-      <Project>{9916839c-39fc-4ceb-a5af-89ca7e87119f}</Project>
-      <Name>Boying.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="VuLu\Content\Web.config" />
     <Content Include="VuLu\placement.info" />
     <Content Include="VuLu\Scripts\Web.config" />
     <Content Include="VuLu\Styles\Web.config" />
     <Content Include="VuLu\Views\Layout.cshtml" />
     <Content Include="VuLu\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Boying\Boying.Framework.csproj">
+      <Project>{2d1d92bb-4555-4cbe-8d0e-63563d6ce4c6}</Project>
+      <Name>Boying.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

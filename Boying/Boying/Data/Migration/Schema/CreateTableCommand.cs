@@ -32,7 +32,7 @@ namespace Boying.Data.Migration.Schema
         /// <summary>
         /// Defines a primary column as for content parts
         /// </summary>
-        public CreateTableCommand ContentPartRecord()
+        public CreateTableCommand ContentRecord()
         {
             Column<int>("Id", column => column.PrimaryKey().NotNull());
 

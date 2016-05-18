@@ -1,4 +1,4 @@
-﻿Name: $$ModuleName$$
+﻿Name: Boying.Users
 AntiForgery: enabled
 Author: The Boying Team
 Website: https://dev.boying.com
@@ -6,5 +6,5 @@ Version: 1.0
 BoyingVersion: 1.0
 Description: Description for the module
 Features:
-    $$ModuleName$$:
-        Description: Description for feature $$ModuleName$$.
+    Boying.Users:
+        Description: Description for feature Boying.Users.

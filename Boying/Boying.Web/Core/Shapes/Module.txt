@@ -1,7 +1,7 @@
 ﻿Name: Shapes
 AntiForgery: enabled
 Author: The Boying Team
-Website: http://Boyingproject.net
+Website: https://dev.boying.com
 Version: 1.10.1
 BoyingVersion: 1.9
 Description: The shapes module contains core shape templates and display hooks.

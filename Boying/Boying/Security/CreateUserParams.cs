@@ -5,18 +5,14 @@ namespace Boying.Security
     {
         private readonly string _username;
         private readonly string _password;
-        private readonly string _email;
-        private readonly string _passwordQuestion;
-        private readonly string _passwordAnswer;
+        private readonly string _mobile;
         private readonly bool _isApproved;
 
-        public CreateUserParams(string username, string password, string email, string passwordQuestion, string passwordAnswer, bool isApproved)
+        public CreateUserParams(string username, string password, string mobile, bool isApproved)
         {
             _username = username;
             _password = password;
-            _email = email;
-            _passwordQuestion = passwordQuestion;
-            _passwordAnswer = passwordAnswer;
+            _mobile = mobile;
             _isApproved = isApproved;
         }
 
@@ -32,17 +28,7 @@ namespace Boying.Security
 
         public string Email
         {
-            get { return _email; }
-        }
-
-        public string PasswordQuestion
-        {
-            get { return _passwordQuestion; }
-        }
-
-        public string PasswordAnswer
-        {
-            get { return _passwordAnswer; }
+            get { return _mobile; }
         }
 
         public bool IsApproved

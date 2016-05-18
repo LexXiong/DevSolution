@@ -168,6 +168,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContentManagement\Content.cs" />
+    <Compile Include="ContentManagement\IContent.cs" />
+    <Compile Include="ContentManagement\XmlHelper.cs" />
+    <Compile Include="Data\ContentRecord.cs" />
     <Compile Include="Environment\Configuration\ExtensionLocations.cs" />
     <Compile Include="DisplayManagement\IPositioned.cs" />
     <Compile Include="DisplayManagement\PositionWrapper.cs" />
@@ -461,7 +465,6 @@
     <Compile Include="Utility\Extensions\VirtualPathProviderExtensions.cs" />
     <Compile Include="Utility\NamedReaderWriterLock.cs" />
     <Compile Include="Utility\ReflectionHelper.cs" />
-    <Compile Include="Utility\XmlHelper.cs" />
     <Compile Include="Validation\PathValidation.cs" />
     <Compile Include="Wcf\BoyingDependencyInjectionServiceBehavior.cs" />
     <Compile Include="Wcf\BoyingInstanceContext.cs" />
@@ -685,7 +688,9 @@
     <Compile Include="Mvc\Routes\UrlPrefix.cs" />
     <Compile Include="Mvc\Routes\UrlPrefixAdjustedHttpContext.cs" />
     <Compile Include="Mvc\Routes\ShellRoute.cs" />
-    <Compile Include="Mvc\ViewUserControl.cs" />
+    <Compile Include="Mvc\ViewUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Mvc\Wrappers\HttpContextBaseWrapper.cs" />
     <Compile Include="Mvc\Wrappers\HttpRequestBaseWrapper.cs" />
     <Compile Include="Mvc\Wrappers\HttpResponseBaseWrapper.cs" />
@@ -753,7 +758,9 @@
     <Compile Include="UI\Resources\LinkEntry.cs" />
     <Compile Include="UI\Resources\ResourceFilter.cs" />
     <Compile Include="UI\Resources\ResourceManager.cs" />
-    <Compile Include="Mvc\ViewPage.cs" />
+    <Compile Include="Mvc\ViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Security\IAuthenticationService.cs" />
     <Compile Include="Security\Authorizer.cs" />
     <Compile Include="Security\Providers\FormsAuthenticationService.cs" />

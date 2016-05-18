@@ -6,9 +6,9 @@
 
         IUser CreateUser(CreateUserParams createUserParams);
 
-        IUser GetUser(string username);
+        IUser GetUser(string mobile);
 
-        IUser ValidateUser(string userNameOrEmail, string password);
+        IUser ValidateUser(string userNameOrMobile, string password);
 
         void SetPassword(IUser user, string password);
     }

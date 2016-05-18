@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Http.Controllers;
 using System.Web.Mvc;
 using Autofac.Core;
+using Boying.Data;
 using Boying.Environment.Configuration;
 using Boying.Environment.Descriptor.Models;
 using Boying.Environment.Extensions;
@@ -227,8 +228,8 @@ namespace Boying.Environment.ShellBuilders
                    type.GetProperty("Id") != null &&
                    (type.GetProperty("Id").GetAccessors()).All(x => x.IsVirtual) &&
                    !type.IsSealed &&
-                   !type.IsAbstract;// &&
-                                    //(!typeof(IContent).IsAssignableFrom(type) || typeof(ContentPartRecord).IsAssignableFrom(type));
+                   !type.IsAbstract &&
+                   typeof(ContentRecord).IsAssignableFrom(type);
         }
 
         private static RecordBlueprint BuildRecord(Type type, Feature feature, ShellSettings settings)

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-16"?>
 <Tenants>
-  <Default>33|Boying.Framework;Settings;Boying.Themes;Boying.Modules;Boying.CodeGeneration;Shapes;VuLu;TheThemeMachine;Boying.Main;|</Default>
+  <Default>35|Boying.Framework;Settings;Boying.Themes;Boying.Modules;Boying.CodeGeneration;Shapes;VuLu;TheThemeMachine;Boying.MainPage;|</Default>
 </Tenants>
