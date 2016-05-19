@@ -71,6 +71,8 @@ namespace Boying.Users.Services
         public IUser GetUser(string mobile)
         {
             var clearMobile = mobile == null ? "" : mobile.Trim();
+
+            throw new NotImplementedException();
         }
 
         public void SetPassword(IUser user, string password)
