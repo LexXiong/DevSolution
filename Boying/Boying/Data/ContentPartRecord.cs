@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Boying.Data
 {
-    public abstract class ContentRecord
+    public abstract class ContentPartRecord
     {
         public virtual int Id { get; set; }
     }

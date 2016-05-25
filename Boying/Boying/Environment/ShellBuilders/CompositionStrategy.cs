@@ -229,7 +229,7 @@ namespace Boying.Environment.ShellBuilders
                    (type.GetProperty("Id").GetAccessors()).All(x => x.IsVirtual) &&
                    !type.IsSealed &&
                    !type.IsAbstract &&
-                   typeof(ContentRecord).IsAssignableFrom(type);
+                   typeof(ContentPartRecord).IsAssignableFrom(type);
         }
 
         private static RecordBlueprint BuildRecord(Type type, Feature feature, ShellSettings settings)

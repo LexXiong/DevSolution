@@ -1,6 +1,6 @@
 ﻿namespace Boying.Data.Migration.Records
 {
-    public class DataMigrationRecord : ContentRecord
+    public class DataMigrationRecord : ContentPartRecord
     {
         public virtual string DataMigrationClass { get; set; }
 

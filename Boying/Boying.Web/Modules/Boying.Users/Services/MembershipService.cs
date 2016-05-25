@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Boying.Data;
 using Boying.DisplayManagement;
 using Boying.Environment.Configuration;
 using Boying.Environment.Extensions;
@@ -12,6 +13,7 @@ using Boying.Security;
 using Boying.Services;
 using Boying.Settings;
 using Boying.Users.Events;
+using Boying.Users.Models;
 
 namespace Boying.Users.Services
 {
@@ -30,6 +32,8 @@ namespace Boying.Users.Services
         private readonly IAppConfigurationAccessor _appConfigurationAccessor;
         private readonly IClock _clock;
 
+        private readonly IRepository<UserPartRecord> _userRecordRepository;
+
         public MembershipService(
             IBoyingServices boyingServices,
             IMessageService messageService,
@@ -38,7 +42,8 @@ namespace Boying.Users.Services
             IEncryptionService encryptionService,
             IShapeFactory shapeFactory,
             IShapeDisplay shapeDisplay,
-            IAppConfigurationAccessor appConfigurationAccessor)
+            IAppConfigurationAccessor appConfigurationAccessor,
+            IRepository<UserPartRecord> userRecordRepository)
         {
             _boyingServices = boyingServices;
             _messageService = messageService;
@@ -48,6 +53,8 @@ namespace Boying.Users.Services
             _shapeDisplay = shapeDisplay;
             _appConfigurationAccessor = appConfigurationAccessor;
             _clock = clock;
+            _userRecordRepository = userRecordRepository;
+
             Logger = NullLogger.Instance;
             T = NullLocalizer.Instance;
         }
@@ -71,6 +78,8 @@ namespace Boying.Users.Services
         public IUser GetUser(string mobile)
         {
             var clearMobile = mobile == null ? "" : mobile.Trim();
+
+            _userRecordRepository.Get(c => c.Mobile == clearMobile);
 
             throw new NotImplementedException();
         }

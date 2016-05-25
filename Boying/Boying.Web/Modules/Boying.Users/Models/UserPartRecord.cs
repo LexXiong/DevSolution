@@ -7,7 +7,7 @@ using Boying.Data;
 
 namespace Boying.Users.Models
 {
-    public class UserRecord : ContentRecord
+    public class UserPartRecord : ContentPartRecord
     {
         public virtual string UserName { get; set; }
 

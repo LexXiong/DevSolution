@@ -75,7 +75,8 @@
     <Compile Include="Events\UserContext.cs" />
     <Compile Include="Events\UserEventHandler.cs" />
     <Compile Include="Migrations.cs" />
-    <Compile Include="Models\UserRecord.cs" />
+    <Compile Include="Models\UserPart.cs" />
+    <Compile Include="Models\UserPartRecord.cs" />
     <Compile Include="Models\UserStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IUserService.cs" />

@@ -168,10 +168,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContentManagement\Content.cs" />
+    <Compile Include="ContentManagement\ContentPart.cs" />
     <Compile Include="ContentManagement\IContent.cs" />
+    <Compile Include="ContentManagement\Utilities\LazyField.cs" />
     <Compile Include="ContentManagement\XmlHelper.cs" />
-    <Compile Include="Data\ContentRecord.cs" />
+    <Compile Include="Data\ContentPartRecord.cs" />
     <Compile Include="Environment\Configuration\ExtensionLocations.cs" />
     <Compile Include="DisplayManagement\IPositioned.cs" />
     <Compile Include="DisplayManagement\PositionWrapper.cs" />
