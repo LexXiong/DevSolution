@@ -224,12 +224,11 @@ namespace Boying.Environment.ShellBuilders
 
         private static bool IsRecord(Type type)
         {
-            return ((type.Namespace ?? "").EndsWith(".Models") || (type.Namespace ?? "").EndsWith(".Records")) &&
-                   type.GetProperty("Id") != null &&
-                   (type.GetProperty("Id").GetAccessors()).All(x => x.IsVirtual) &&
-                   !type.IsSealed &&
-                   !type.IsAbstract &&
-                   typeof(ContentPartRecord).IsAssignableFrom(type);
+            return ((type.Namespace ?? "").EndsWith(".Models") || (type.Namespace ?? "").EndsWith(".Records")) &&   // 命名空间以<.Models>或<.Records>结尾
+                   type.GetProperty("Id") != null &&                                                                // 包含名为<Id>的属性
+                   (type.GetProperty("Id").GetAccessors()).All(x => x.IsVirtual) &&                                 // 名为<Id>的属性是虚属性
+                   !type.IsSealed &&                                                                                // 不是密封类
+                   !type.IsAbstract;
         }
 
         private static RecordBlueprint BuildRecord(Type type, Feature feature, ShellSettings settings)
