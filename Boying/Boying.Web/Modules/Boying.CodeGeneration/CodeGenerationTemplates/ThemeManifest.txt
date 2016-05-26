@@ -1,6 +1,6 @@
 ﻿Name: $$ThemeName$$
 Author: The Boying Team
-Website: http://www.Boyingproject.net
+Website: https://dev.boying.com
 Description: Description for the theme
 Version: 1.0
 BaseTheme: $$BaseTheme$$
