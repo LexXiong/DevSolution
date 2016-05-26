@@ -3,7 +3,7 @@ Themes:
 Modules: 
 Name: Default
 DataProvider: sqlserver
-DataConnectionString: Data Source=.\SQLEXPRESS;Initial Catalog=Boying;User ID=sa;Password=123456
+DataConnectionString: Data Source=.\SQLEXPRESS;Initial Catalog=FQBao;User ID=sa;Password=123456
 DataTablePrefix: null
 RequestUrlHost: null
 RequestUrlPrefix: null
