@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -86,6 +86,24 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="FQBao\Assets.json" />
+    <Content Include="FQBao\Assets\Styles.less" />
+    <Content Include="FQBao\Styles\Styles.css" />
+    <Content Include="FQBao\Styles\Styles.min.css" />
+    <Content Include="FQBao\Web.config" />
+    <Content Include="FQBao\Scripts\Web.config" />
+    <Content Include="FQBao\Styles\Web.config" />
+    <Content Include="FQBao\Content\Web.config" />
+    <Content Include="FQBao\Theme.txt" />
+    <Content Include="FQBao\Theme.png" />
+    <Content Include="FQBao\Placement.info" />
+    <Folder Include="FQBao\Assets" />
+    <Folder Include="FQBao\Content" />
+    <Folder Include="FQBao\Styles" />
+    <Folder Include="FQBao\Scripts" />
+    <Folder Include="FQBao\Views" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
