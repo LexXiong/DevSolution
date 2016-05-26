@@ -98,6 +98,7 @@
     <Content Include="CodeGenerationTemplates\ModuleStylesCss.txt" />
     <Content Include="CodeGenerationTemplates\ModuleStylesLess.txt" />
     <Content Include="CodeGenerationTemplates\ModuleTestsCsProj.txt" />
+    <Content Include="CodeGenerationTemplates\Routes.txt" />
     <Content Include="CodeGenerationTemplates\StaticFilesWebConfig.txt" />
     <Content Include="CodeGenerationTemplates\Theme.png" />
     <Content Include="CodeGenerationTemplates\ThemeManifest.txt" />

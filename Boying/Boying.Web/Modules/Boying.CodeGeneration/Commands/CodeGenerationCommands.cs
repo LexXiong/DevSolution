@@ -225,6 +225,72 @@ namespace Boying.CodeGeneration.Commands
             Context.Output.WriteLine(T("Theme {0} created successfully", themeName));
         }
 
+        [CommandHelp("codegen urlroute <feature-name> \r\n\t" + "Create a new Routes class")]
+        [CommandName("codegen urlroute")]
+        public void CreateUrlRoute(string featureName)
+        {
+            Context.Output.WriteLine(T("Creating Url Routes for {0}", featureName));
+            ExtensionDescriptor extensionDescriptor = _extensionManager.AvailableExtensions().FirstOrDefault(extension => DefaultExtensionTypes.IsModule(extension.ExtensionType) &&
+                                                                                                             extension.Features.Any(feature => String.Equals(feature.Id, featureName, StringComparison.OrdinalIgnoreCase)));
+
+            if (extensionDescriptor == null)
+            {
+                Context.Output.WriteLine(T("Creating url routes failed: target Feature {0} could not be found.", featureName));
+                return;
+            }
+
+            string urlRouteFolderPath = HostingEnvironment.MapPath("~/Modules/" + extensionDescriptor.Id + "/");
+            string urlRouteFilePath = urlRouteFolderPath + "Routes.cs";
+            string templatesPath = HostingEnvironment.MapPath("~/Modules/Boying." + ModuleName + "/CodeGenerationTemplates/");
+            string moduleCsProjPath = HostingEnvironment.MapPath(string.Format("~/Modules/{0}/{0}.csproj", extensionDescriptor.Id));
+
+            if (!Directory.Exists(urlRouteFolderPath))
+            {
+                Directory.CreateDirectory(urlRouteFolderPath);
+            }
+
+            if (File.Exists(urlRouteFilePath))
+            {
+                Context.Output.WriteLine(T("Url Routes already exists in target Module {0}.", extensionDescriptor.Id));
+                return;
+            }
+
+            List<SchemaCommand> commands = _schemaCommandGenerator.GetCreateFeatureCommands(featureName, false).ToList();
+            string urlRouteText;
+            using (var stringWriter = new StringWriter())
+            {
+                var interpreter = new CodeGenerationCommandInterpreter(stringWriter);
+
+                foreach (var command in commands)
+                {
+                    interpreter.Visit(command);
+                    stringWriter.WriteLine();
+                }
+
+                urlRouteText = File.ReadAllText(templatesPath + "Routes.txt");
+                urlRouteText = urlRouteText.Replace("$$FeatureName$$", featureName);
+            }
+            File.WriteAllText(urlRouteFilePath, urlRouteText);
+
+            string projectFileText = File.ReadAllText(moduleCsProjPath);
+
+            // The string searches in solution/project files can be made aware of comment lines.
+            if (projectFileText.Contains("<Compile Include"))
+            {
+                string compileReference = string.Format("<Compile Include=\"{0}\" />\r\n    ", "Routes.cs");
+                projectFileText = projectFileText.Insert(projectFileText.LastIndexOf("<Compile Include"), compileReference);
+            }
+            else
+            {
+                string itemGroupReference = string.Format("</ItemGroup>\r\n  <ItemGroup>\r\n    <Compile Include=\"{0}\" />\r\n  ", "Routes.cs");
+                projectFileText = projectFileText.Insert(projectFileText.LastIndexOf("</ItemGroup>"), itemGroupReference);
+            }
+
+            File.WriteAllText(moduleCsProjPath, projectFileText);
+            TouchSolution(Context.Output);
+            Context.Output.WriteLine(T("Url Routes created successfully in Module {0}", extensionDescriptor.Id));
+        }
+
         [CommandHelp("codegen controller <module-name> <controller-name>\r\n\t" + "Create a new Boying controller in a module")]
         [CommandName("codegen controller")]
         public void CreateController(string moduleName, string controllerName)
