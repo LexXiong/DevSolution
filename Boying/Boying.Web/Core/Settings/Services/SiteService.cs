@@ -19,6 +19,18 @@ namespace Boying.Core.Settings.Services
         {
             return new SiteSettingsPart
             {
+                HomePage = "/",
+                BaseUrl = "",
+                PageSize = 10,
+                PageTitleSeparator = " - ",
+                ResourceDebugMode = ResourceDebugMode.FromAppSetting,
+                SiteCalendar = "",
+                SiteCulture = "zh-CN",
+                SiteName = "分期保",
+                SiteSalt = "",
+                SiteTimeZone = "China Standard Time",
+                SuperUser = "boying",
+                UseCdn = false
             };
         }
     }

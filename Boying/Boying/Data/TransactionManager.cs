@@ -1,7 +1,9 @@
 ﻿using System.Data;
+using System.Web.Http.Filters;
 using System.Web.Mvc;
-using NHibernate;
 using Boying.Mvc.Filters;
+using Boying.WebApi.Filters;
+using NHibernate;
 
 namespace Boying.Data
 {
@@ -18,7 +20,7 @@ namespace Boying.Data
         ISession GetSession();
     }
 
-    public class TransactionFilter : FilterProvider, IExceptionFilter
+    public class TransactionFilter : FilterProvider, System.Web.Mvc.IExceptionFilter
     {
         private readonly ITransactionManager _transactionManager;
 
@@ -28,6 +30,21 @@ namespace Boying.Data
         }
 
         public void OnException(ExceptionContext filterContext)
+        {
+            _transactionManager.Cancel();
+        }
+    }
+
+    public class WebApiTransactionFilter : ExceptionFilterAttribute, IApiFilterProvider
+    {
+        private readonly ITransactionManager _transactionManager;
+
+        public WebApiTransactionFilter(ITransactionManager transactionManager)
+        {
+            _transactionManager = transactionManager;
+        }
+
+        public override void OnException(HttpActionExecutedContext actionExecutedContext)
         {
             _transactionManager.Cancel();
         }
