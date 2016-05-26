@@ -1,5 +1,6 @@
 ﻿using Boying.Caching;
 using Boying.ContentManagement;
+using Boying.Data;
 using Boying.Environment.Extensions;
 using Boying.Environment.Extensions.Models;
 using Boying.Themes.Models;
@@ -23,17 +24,20 @@ namespace Boying.Themes.Services
         private readonly ICacheManager _cacheManager;
         private readonly ISignals _signals;
         private readonly IBoyingServices _BoyingServices;
+        private readonly IRepository<ThemeSiteSettingsRecord> _themeSiteSettingRepository;
 
         public SiteThemeService(
             IBoyingServices BoyingServices,
             IExtensionManager extensionManager,
             ICacheManager cacheManager,
-            ISignals signals)
+            ISignals signals,
+            IRepository<ThemeSiteSettingsRecord> themeSiteSettingRepository)
         {
             _BoyingServices = BoyingServices;
             _extensionManager = extensionManager;
             _cacheManager = cacheManager;
             _signals = signals;
+            _themeSiteSettingRepository = themeSiteSettingRepository;
         }
 
         public ExtensionDescriptor GetSiteTheme()
@@ -44,8 +48,11 @@ namespace Boying.Themes.Services
 
         public void SetSiteTheme(string themeName)
         {
-            //var site = _BoyingServices.WorkContext.CurrentSite;
-            //site.As<ThemeSiteSettingsPart>().CurrentThemeName = themeName;
+            var site = _BoyingServices.WorkContext.CurrentSite as ThemeSiteSettingsRecord;
+
+            site.CurrentThemeName = themeName;
+
+            _themeSiteSettingRepository.Update(site);
 
             _signals.Trigger(CurrentThemeSignal);
         }
@@ -55,8 +62,10 @@ namespace Boying.Themes.Services
             return _cacheManager.Get("CurrentThemeName", ctx =>
             {
                 ctx.Monitor(_signals.When(CurrentThemeSignal));
-                //return _BoyingServices.WorkContext.CurrentSite.As<ThemeSiteSettingsPart>().CurrentThemeName;
-                return "TheThemeMachine";
+
+                var themeSite = _themeSiteSettingRepository.Get(c => c != null);
+
+                return (themeSite ?? new ThemeSiteSettingsRecord { CurrentThemeName = "TheThemeMachine" }).CurrentThemeName;
             });
         }
     }

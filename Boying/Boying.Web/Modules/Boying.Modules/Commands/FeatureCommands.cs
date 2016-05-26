@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Boying.Commands;
+using Boying.Data.Migration;
 using Boying.Environment.Descriptor.Models;
 using Boying.Environment.Features;
 using Boying.Modules.Services;
@@ -15,16 +16,19 @@ namespace Boying.Modules.Commands
         private readonly IModuleService _moduleService;
         private readonly INotifier _notifier;
         private readonly IFeatureManager _featureManager;
+        private readonly IDataMigrationManager _dataMigrationManager;
         private readonly ShellDescriptor _shellDescriptor;
 
         public FeatureCommands(IModuleService moduleService,
             INotifier notifier,
             IFeatureManager featureManager,
+            IDataMigrationManager dataMigrationManager,
             ShellDescriptor shellDescriptor)
         {
             _moduleService = moduleService;
             _notifier = notifier;
             _featureManager = featureManager;
+            _dataMigrationManager = dataMigrationManager;
             _shellDescriptor = shellDescriptor;
         }
 
@@ -111,6 +115,15 @@ namespace Boying.Modules.Commands
             Context.Output.WriteLine(T("Disabling features {0}", string.Join(",", featureNames)));
             _moduleService.DisableFeatures(featureNames, true);
             Context.Output.WriteLine(T("Disabled features  {0}", string.Join(",", featureNames)));
+        }
+
+        [CommandHelp("feature upgrade <feature-name-1> ... <feature-name-n>\r\n\t" + "Upgrade one or more features")]
+        [CommandName("feature upgrade")]
+        public void Upgrade(params string[] featureNames)
+        {
+            Context.Output.WriteLine(T("Upgrading features {0}", string.Join(",", featureNames)));
+            _dataMigrationManager.Update(featureNames);
+            Context.Output.WriteLine(T("Upgraded features  {0}", string.Join(",", featureNames)));
         }
     }
 }

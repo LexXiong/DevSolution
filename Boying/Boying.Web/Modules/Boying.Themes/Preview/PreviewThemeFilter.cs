@@ -5,8 +5,10 @@ using Boying.Environment.Extensions.Models;
 using Boying.Environment.Features;
 using Boying.Mvc.Filters;
 
-namespace Boying.Themes.Preview {
-    public class PreviewThemeFilter : FilterProvider, IResultFilter {
+namespace Boying.Themes.Preview
+{
+    public class PreviewThemeFilter : FilterProvider, IResultFilter
+    {
         private readonly IPreviewTheme _previewTheme;
         private readonly IWorkContextAccessor _workContextAccessor;
         private readonly dynamic _shapeFactory;
@@ -16,15 +18,18 @@ namespace Boying.Themes.Preview {
             IPreviewTheme previewTheme,
             IWorkContextAccessor workContextAccessor,
             IShapeFactory shapeFactory,
-            IFeatureManager featureManager) {
+            IFeatureManager featureManager)
+        {
             _previewTheme = previewTheme;
             _workContextAccessor = workContextAccessor;
             _shapeFactory = shapeFactory;
             _featureManager = featureManager;
         }
 
-        public void OnResultExecuting(ResultExecutingContext filterContext) {
-            if(filterContext.Result as ViewResult == null) {
+        public void OnResultExecuting(ResultExecutingContext filterContext)
+        {
+            if (filterContext.Result as ViewResult == null)
+            {
                 return;
             }
 
@@ -34,11 +39,12 @@ namespace Boying.Themes.Preview {
 
             var installedThemes = _featureManager.GetEnabledFeatures()
                 .Select(x => x.Extension)
-                .Where(x =>  DefaultExtensionTypes.IsTheme(x.ExtensionType))
+                .Where(x => DefaultExtensionTypes.IsTheme(x.ExtensionType))
                 .Distinct();
 
             var themeListItems = installedThemes
-                .Select(theme => new SelectListItem {
+                .Select(theme => new SelectListItem
+                {
                     Text = theme.Name,
                     Value = theme.Id,
                     Selected = theme.Id == previewThemeName
@@ -48,6 +54,8 @@ namespace Boying.Themes.Preview {
             _workContextAccessor.GetContext(filterContext).Layout.Zones["Body"].Add(_shapeFactory.ThemePreview(Themes: themeListItems), ":before");
         }
 
-        public void OnResultExecuted(ResultExecutedContext filterContext) { }
+        public void OnResultExecuted(ResultExecutedContext filterContext)
+        {
+        }
     }
 }

@@ -3,7 +3,7 @@ using Boying;
 using Boying.Localization;
 using Boying.Themes;
 
-namespace Boying.MainPage.Controllers
+namespace Boying.FQBao.Controllers
 {
     [Themed]
     public class HomeController : Controller

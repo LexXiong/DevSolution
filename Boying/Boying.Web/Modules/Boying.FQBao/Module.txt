@@ -1,0 +1,11 @@
+﻿Name: Boying.FQBao
+AntiForgery: enabled
+Author: The Boying Team
+Website: https://dev.boying.com
+Version: 1.0
+BoyingVersion: 1.0
+Category: FQBao
+Description: Description for the module
+Features:
+    Boying.FQBao:
+        Description: Description for feature Boying.FQBao.

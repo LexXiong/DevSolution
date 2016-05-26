@@ -1,7 +1,0 @@
-Name: FQBao
-Author: The Boying Team
-Website: http://www.Boyingproject.net
-Description: Description for the theme
-Version: 1.0
-# todo: provide tags
-# Tags: Classic, Serif
