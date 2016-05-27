@@ -7,8 +7,8 @@ namespace Boying.Security
     /// </summary>
     public interface IUser : IContent
     {
-        string UserName { get; }
-
         string Mobile { get; }
+
+        string Email { get; }
     }
 }

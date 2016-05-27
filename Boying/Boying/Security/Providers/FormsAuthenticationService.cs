@@ -61,11 +61,11 @@ namespace Boying.Security.Providers
 
             // The cookie user data is "{userName.Base64};{tenant}".
             // The username is encoded to Base64 to prevent collisions with the ';' seprarator.
-            var userData = String.Concat(user.UserName.ToBase64(), ";", _settings.Name);
+            var userData = String.Concat(user.Mobile.ToBase64(), ";", _settings.Name);
 
             var ticket = new FormsAuthenticationTicket(
                 _cookieVersion,
-                user.UserName,
+                user.Mobile,
                 now,
                 now.Add(ExpirationTimeSpan),
                 createPersistentCookie,

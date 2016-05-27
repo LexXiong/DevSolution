@@ -172,7 +172,8 @@
     <Compile Include="ContentManagement\IContent.cs" />
     <Compile Include="ContentManagement\Utilities\LazyField.cs" />
     <Compile Include="ContentManagement\XmlHelper.cs" />
-    <Compile Include="Data\ContentPartRecord.cs" />
+    <Compile Include="Data\ContentRecord.cs" />
+    <Compile Include="Data\EncryptedAttribute.cs" />
     <Compile Include="Environment\Configuration\ExtensionLocations.cs" />
     <Compile Include="DisplayManagement\IPositioned.cs" />
     <Compile Include="DisplayManagement\PositionWrapper.cs" />
@@ -217,7 +218,7 @@
     <Compile Include="Data\Bags\SArray.cs" />
     <Compile Include="Data\Conventions\UtcDateTimeConvention.cs" />
     <Compile Include="Data\DefaultSessionConfigurationEvents.cs" />
-    <Compile Include="Data\DoNotMapAttribute.cs" />
+    <Compile Include="Data\NotMappedAttribute.cs" />
     <Compile Include="Data\FetchRequest.cs" />
     <Compile Include="Data\SessionConfigurationEventsWithParameters.cs" />
     <Compile Include="Data\ISessionConfigurationEventsWithParameters.cs" />

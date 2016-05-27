@@ -95,8 +95,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\Permissions.cs" />
-    <Compile Include="Settings\ResourceManifest.cs" />
-    <Compile Include="Settings\Routes.cs" />
     <Compile Include="Settings\State\Records\ShellFeatureStateRecord.cs" />
     <Compile Include="Settings\State\Records\ShellStateRecord.cs" />
     <Compile Include="Settings\State\ShellStateManager.cs" />
@@ -109,14 +107,18 @@
     <Compile Include="Shapes\ResourceManifest.cs" />
     <Compile Include="Shapes\CoreShapes.cs" />
     <Compile Include="Shapes\DateTimeShapes.cs" />
+    <Compile Include="Users\Events\IUserEventHandler.cs" />
+    <Compile Include="Users\Events\UserContext.cs" />
+    <Compile Include="Users\Migrations.cs" />
+    <Compile Include="Users\Models\RegistrationSettingsRecord.cs" />
+    <Compile Include="Users\Models\UserPart.cs" />
+    <Compile Include="Users\Models\UserRecord.cs" />
+    <Compile Include="Users\Models\UserStatus.cs" />
+    <Compile Include="Users\Services\MembershipService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Shapes\Scripts\admin-localnavigation.js" />
     <Content Include="Settings\Module.txt" />
-    <Content Include="Settings\Styles\admin.css" />
-    <Content Include="Settings\Styles\images\menu.settings.png" />
-    <Content Include="Settings\Styles\menu.settings-admin.css" />
-    <Content Include="Settings\Placement.info" />
     <Content Include="Shapes\Module.txt" />
     <Content Include="Shapes\Scripts\base.js" />
     <Content Include="Shapes\Scripts\html5.js" />
@@ -156,9 +158,6 @@
     <Content Include="Shapes\Styles\Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Settings\Styles\Web.config">
-      <SubType>Designer</SubType>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Shapes\Views\ShapeResult\Display.cshtml" />
@@ -170,6 +169,7 @@
     <Content Include="Shapes\Views\LocalMenuItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Users\Module.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

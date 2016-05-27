@@ -1,0 +1,9 @@
+﻿Name: Boying.Users
+AntiForgery: enabled
+Author: The Boying Team
+Website: https://www.boying.com
+Version: 1.0
+BoyingVersion: 1.0
+Description: Description for the module
+FeatureDescription: Site users.
+Category: Core

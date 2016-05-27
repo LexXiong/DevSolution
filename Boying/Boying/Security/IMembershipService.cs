@@ -8,7 +8,7 @@
 
         IUser GetUser(string mobile);
 
-        IUser ValidateUser(string userNameOrMobile, string password);
+        IUser ValidateUser(string mobileOrEmail, string password);
 
         void SetPassword(IUser user, string password);
     }

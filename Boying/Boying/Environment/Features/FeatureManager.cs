@@ -87,7 +87,7 @@ namespace Boying.Environment.Features
                 .ToDictionary(featureDescriptor => featureDescriptor,
                                 featureDescriptor => enabledFeatures.FirstOrDefault(shellFeature => shellFeature.Name == featureDescriptor.Id) != null);
 
-            //Fix for https://Boying.codeplex.com/workitem/21176 / https://github.com/BoyingCMS/Boying/issues/6075 - added distinct to the end to ensure each feature is only listed once
+            //Fix for https://orchard.codeplex.com/workitem/21176 / https://github.com/OrchardCMS/Orchard/issues/6075 - added distinct to the end to ensure each feature is only listed once
             IEnumerable<string> featuresToEnable = featureIds
                 .Select(featureId => EnableFeature(featureId, availableFeatures, force)).ToList()
                 .SelectMany(ies => ies.Select(s => s)).Distinct();

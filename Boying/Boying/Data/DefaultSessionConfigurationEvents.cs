@@ -18,7 +18,7 @@ namespace Boying.Data
         {
             defaultModel.OverrideAll(map =>
             {
-                map.IgnoreProperties(x => x.MemberInfo.IsDefined(typeof(DoNotMapAttribute), false));
+                map.IgnoreProperties(x => x.MemberInfo.IsDefined(typeof(NotMappedAttribute), false));
             });
         }
     }

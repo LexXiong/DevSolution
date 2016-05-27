@@ -3,22 +3,27 @@ namespace Boying.Security
     //TEMP: Add setters, provide default constructor and remove parameterized constructor
     public class CreateUserParams
     {
-        private readonly string _username;
         private readonly string _password;
+        private readonly string _email;
         private readonly string _mobile;
+        private readonly string _nickname;
         private readonly bool _isApproved;
 
-        public CreateUserParams(string username, string password, string mobile, bool isApproved)
+        public CreateUserParams(string nickname, string mobile, string email, string password, bool isApproved)
         {
-            _username = username;
+            _nickname = nickname;
             _password = password;
             _mobile = mobile;
+            _email = email;
             _isApproved = isApproved;
         }
 
-        public string Username
+        public string NickName
         {
-            get { return _username; }
+            get
+            {
+                return _nickname;
+            }
         }
 
         public string Password
@@ -27,6 +32,11 @@ namespace Boying.Security
         }
 
         public string Email
+        {
+            get { return _email; }
+        }
+
+        public string Mobile
         {
             get { return _mobile; }
         }
