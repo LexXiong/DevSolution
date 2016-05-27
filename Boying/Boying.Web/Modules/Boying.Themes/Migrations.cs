@@ -11,8 +11,8 @@ namespace Boying.Themes
         {
             // Creating table ThemeSiteSettingsRecord
             SchemaBuilder.CreateTable("ThemeSiteSettingsRecord", table => table
-                .ContentPartRecord()
-                .Column("CurrentThemeName", DbType.String)
+                .Column<int>("Id", c => c.PrimaryKey().Identity())
+                .Column<string>("CurrentThemeName")
             );
 
             return 1;

@@ -116,14 +116,5 @@ namespace Boying.Modules.Commands
             _moduleService.DisableFeatures(featureNames, true);
             Context.Output.WriteLine(T("Disabled features  {0}", string.Join(",", featureNames)));
         }
-
-        [CommandHelp("feature upgrade <feature-name-1> ... <feature-name-n>\r\n\t" + "Upgrade one or more features")]
-        [CommandName("feature upgrade")]
-        public void Upgrade(params string[] featureNames)
-        {
-            Context.Output.WriteLine(T("Upgrading features {0}", string.Join(",", featureNames)));
-            _dataMigrationManager.Update(featureNames);
-            Context.Output.WriteLine(T("Upgraded features  {0}", string.Join(",", featureNames)));
-        }
     }
 }

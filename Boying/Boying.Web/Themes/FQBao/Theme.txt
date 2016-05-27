@@ -1,4 +1,4 @@
-﻿Name: $$ThemeName$$
+Name: FQBao
 Author: The Boying Team
 Website: https://www.boying.com
 Description: Description for the theme

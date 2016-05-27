@@ -38,15 +38,5 @@ namespace Boying.Data.Migration.Schema
 
             return this;
         }
-
-        /// <summary>
-        /// Defines a primary column as for versionnable content parts
-        /// </summary>
-        public CreateTableCommand ContentPartVersionRecord()
-        {
-            Column<int>("Id", column => column.PrimaryKey().NotNull());
-            Column<int>("ContentItemRecord_id");
-            return this;
-        }
     }
 }

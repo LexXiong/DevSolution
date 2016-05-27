@@ -3,5 +3,5 @@ Version: 1.10.1
 Author: Jon Wall
 Tags: hidden, admin
 Description: The Boying admin theme.
-Website: http://www.Boyingproject.net
+Website: https://www.boying.com
 Zones: Header, Messages, BeforeContent, LocalNavigation, Content, AfterContent, Footer

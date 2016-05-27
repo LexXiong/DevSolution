@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-16"?>
 <Tenants>
-  <Default>6|Boying.Framework;Settings;Boying.Modules;Boying.CodeGeneration;Boying.FQBao.Portal;Boying.FQBao;Boying.Themes;FQBao;TheThemeMachine;Shapes;|</Default>
+  <Default>9|Boying.Framework;Settings;Boying.Modules;Boying.CodeGeneration;Boying.FQBao.Portal;Boying.FQBao;Boying.Themes;FQBao;TheThemeMachine;Shapes;Boying.Migrations;DatabaseUpdate;FQBao;|</Default>
 </Tenants>

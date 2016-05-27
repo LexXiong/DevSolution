@@ -2,7 +2,7 @@
 AntiForgery: enabled
 SessionState: required
 Author: The Boying Team
-Website: https://dev.boying.com
+Website: https://www.boying.com
 Version: 1.10.1
 BoyingVersion: 1.9
 Description: The themes module makes it possible for Boying applications to customize the look and feel of an Boying web site.

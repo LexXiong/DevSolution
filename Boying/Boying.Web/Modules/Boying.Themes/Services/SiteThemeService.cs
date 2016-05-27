@@ -43,23 +43,30 @@ namespace Boying.Themes.Services
         public ExtensionDescriptor GetSiteTheme()
         {
             string currentThemeName = GetCurrentThemeName();
-            return string.IsNullOrEmpty(currentThemeName) ? null : _extensionManager.GetExtension(GetCurrentThemeName());
+            return string.IsNullOrEmpty(currentThemeName) ? null : _extensionManager.GetExtension(currentThemeName);
         }
 
         public void SetSiteTheme(string themeName)
         {
-            var site = _BoyingServices.WorkContext.CurrentSite as ThemeSiteSettingsRecord;
+            var siteTheme = _themeSiteSettingRepository.Get(c => c != null) ?? new ThemeSiteSettingsRecord();
 
-            site.CurrentThemeName = themeName;
+            siteTheme.CurrentThemeName = themeName;
 
-            _themeSiteSettingRepository.Update(site);
+            if (siteTheme.Id == 0)
+            {
+                _themeSiteSettingRepository.Create(siteTheme);
+            }
+            else
+            {
+                _themeSiteSettingRepository.Update(siteTheme);
+            }
 
             _signals.Trigger(CurrentThemeSignal);
         }
 
         public string GetCurrentThemeName()
         {
-            return _cacheManager.Get("CurrentThemeName", ctx =>
+            return _cacheManager.Get("SiteCurrentTheme", ctx =>
             {
                 ctx.Monitor(_signals.When(CurrentThemeSignal));
 
