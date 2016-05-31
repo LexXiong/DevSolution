@@ -23,7 +23,7 @@ namespace Boying.Core.Users.Events
         /// <summary>
         /// Called before a user has logged in
         /// </summary>
-        void LoggingIn(string userNameOrEmail, string password);
+        void LoggingIn(string mobileOrEmail, string password);
 
         /// <summary>
         /// Called after a user has logged in
@@ -33,7 +33,7 @@ namespace Boying.Core.Users.Events
         /// <summary>
         /// Called when a login attempt failed
         /// </summary>
-        void LogInFailed(string userNameOrEmail, string password);
+        void LogInFailed(string mobileOrEmail, string password);
 
         /// <summary>
         /// Called when a user explicitly logs out (as opposed to one whose session cookie simply expires)

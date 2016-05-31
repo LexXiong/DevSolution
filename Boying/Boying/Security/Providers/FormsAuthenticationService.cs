@@ -59,8 +59,8 @@ namespace Boying.Security.Providers
         {
             var now = _clock.UtcNow.ToLocalTime();
 
-            // The cookie user data is "{userName.Base64};{tenant}".
-            // The username is encoded to Base64 to prevent collisions with the ';' seprarator.
+            // The cookie user data is "{mobile.Base64};{tenant}".
+            // The mobile is encoded to Base64 to prevent collisions with the ';' seprarator.
             var userData = String.Concat(user.Mobile.ToBase64(), ";", _settings.Name);
 
             var ticket = new FormsAuthenticationTicket(

@@ -9,64 +9,16 @@ using Boying.ContentManagement.Utilities;
 
 namespace Boying.ContentManagement
 {
-    public class ContentPart : DynamicObject, IContent
+    public class ContentPart<TRecord> : DynamicObject, IContent
     {
-        public int Id { get; set; }
-
-        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        public int Id
         {
-            var found = base.TryGetMember(binder, out result);
-            if (!found)
+            get
             {
-                //foreach (var part in ContentItem.Parts)
-                //{
-                //    if (part.PartDefinition.Name == binder.Name)
-                //    {
-                //        result = part;
-                //        return true;
-                //    }
-                //}
-
-                //foreach (var field in Fields)
-                //{
-                //    if (field.PartFieldDefinition.Name == binder.Name)
-                //    {
-                //        result = field;
-                //        return true;
-                //    }
-                //}
-                result = null;
-                return true;
+                throw new NotImplementedException();
             }
-
-            return true;
         }
 
-        public T Retrieve<T>(string fieldName)
-        {
-            //return InfosetHelper.Retrieve<T>(this, fieldName);
-            return default(T);
-        }
-
-        public T RetrieveVersioned<T>(string fieldName)
-        {
-            //return this.Retrieve<T>(fieldName, true);
-            return default(T);
-        }
-
-        public virtual void Store<T>(string fieldName, T value)
-        {
-            //InfosetHelper.Store(this, fieldName, value);
-        }
-
-        public virtual void StoreVersioned<T>(string fieldName, T value)
-        {
-            //this.Store(fieldName, value, true);
-        }
-    }
-
-    public class ContentPart<TRecord> : ContentPart
-    {
         static ContentPart()
         {
         }
