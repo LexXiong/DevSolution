@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Themes", "Boying.Web
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.FQBao", "Boying.Web\Modules\Boying.FQBao\Boying.FQBao.csproj", "{24326917-F33B-48A2-8AB8-CDF1632A13BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boying.Users", "Boying.Web\Modules\Boying.Users\Boying.Users.csproj", "{7279E6D6-8076-49F4-A89C-331BC0DEB4D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CodeCoverage|Any CPU = CodeCoverage|Any CPU
@@ -178,6 +180,13 @@ Global
 		{24326917-F33B-48A2-8AB8-CDF1632A13BA}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
 		{24326917-F33B-48A2-8AB8-CDF1632A13BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24326917-F33B-48A2-8AB8-CDF1632A13BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7279E6D6-8076-49F4-A89C-331BC0DEB4D7}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
+		{7279E6D6-8076-49F4-A89C-331BC0DEB4D7}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
+		{7279E6D6-8076-49F4-A89C-331BC0DEB4D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7279E6D6-8076-49F4-A89C-331BC0DEB4D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7279E6D6-8076-49F4-A89C-331BC0DEB4D7}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
+		{7279E6D6-8076-49F4-A89C-331BC0DEB4D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7279E6D6-8076-49F4-A89C-331BC0DEB4D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -192,6 +201,7 @@ Global
 		{CB70A642-8CEC-4DDE-8C9F-AD08900EC98D} = {74492CBC-7201-417E-BC29-28B4C25A58B0}
 		{CDE24A24-01D3-403C-84B9-37722E18DFB7} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 		{24326917-F33B-48A2-8AB8-CDF1632A13BA} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
+		{7279E6D6-8076-49F4-A89C-331BC0DEB4D7} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4

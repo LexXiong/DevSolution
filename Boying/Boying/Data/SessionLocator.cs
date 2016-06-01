@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using NHibernate;
-using NHibernate.SqlCommand;
-using NHibernate.Type;
 using Boying.Exceptions;
 using Boying.Logging;
 using Boying.Security;
+using NHibernate;
+using NHibernate.SqlCommand;
+using NHibernate.Type;
 
 namespace Boying.Data
 {
@@ -35,19 +35,15 @@ namespace Boying.Data
     {
         private readonly ISessionFactoryHolder _sessionFactoryHolder;
         private readonly IEnumerable<ISessionInterceptor> _interceptors;
-        //private Func<IContentManagerSession> _contentManagerSessionFactory;
 
         private ISession _session;
-        //private IContentManagerSession _contentManagerSession;
 
         public TransactionManager(
             ISessionFactoryHolder sessionFactoryHolder,
-            //Func<IContentManagerSession> contentManagerSessionFactory,
             IEnumerable<ISessionInterceptor> interceptors)
         {
             _sessionFactoryHolder = sessionFactoryHolder;
             _interceptors = interceptors;
-            //_contentManagerSessionFactory = contentManagerSessionFactory;
 
             Logger = NullLogger.Instance;
             IsolationLevel = IsolationLevel.ReadCommitted;

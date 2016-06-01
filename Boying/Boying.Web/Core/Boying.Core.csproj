@@ -107,14 +107,6 @@
     <Compile Include="Shapes\ResourceManifest.cs" />
     <Compile Include="Shapes\CoreShapes.cs" />
     <Compile Include="Shapes\DateTimeShapes.cs" />
-    <Compile Include="Users\Events\IUserEventHandler.cs" />
-    <Compile Include="Users\Events\UserContext.cs" />
-    <Compile Include="Users\Migrations.cs" />
-    <Compile Include="Users\Models\RegistrationSettingsRecord.cs" />
-    <Compile Include="Users\Models\UserPart.cs" />
-    <Compile Include="Users\Models\UserRecord.cs" />
-    <Compile Include="Users\Models\UserStatus.cs" />
-    <Compile Include="Users\Services\MembershipService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Shapes\Scripts\admin-localnavigation.js" />
@@ -169,7 +161,6 @@
     <Content Include="Shapes\Views\LocalMenuItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Users\Module.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

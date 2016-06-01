@@ -169,7 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContentManagement\ContentPart.cs" />
+    <Compile Include="ContentManagement\Handlers\IContentHandler.cs" />
     <Compile Include="ContentManagement\IContent.cs" />
+    <Compile Include="ContentManagement\IContentManager.cs" />
     <Compile Include="ContentManagement\Utilities\LazyField.cs" />
     <Compile Include="ContentManagement\XmlHelper.cs" />
     <Compile Include="Data\ContentRecord.cs" />
